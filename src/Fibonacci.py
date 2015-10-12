@@ -1,6 +1,6 @@
 __author__ = 'sjp1'
 
 a, b = 0, 1
-while b < 1000:
+while b < 2000:
     print(b)
     a, b = b, a+b
