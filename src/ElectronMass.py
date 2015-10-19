@@ -63,10 +63,12 @@ J_axial = I / area
 print('Current density: %.3e A/m^2' % J_axial)
 sigma = 1 / 16.78e-9
 print('Conductivity: %.3e S/m' % sigma)
+
 E_axial = J_axial / sigma
 print('Electric field, axial: %.3f mV/m' % (CONVERT_TO_MILLI * E_axial))
 S = J_axial**2 * radius / (2 * sigma) # J^2 r / 2 sigma,  maybe missing factor 2????
 print('Poynting vector at surface: %.3f W/m^2' % S)
+
 power_per_m = S * 2 * math.pi * radius # S x 2 pi r x length
 print('Power, per cm: %.3f mW/cm' % (CONVERT_TO_MILLI * power_per_m / CONVERT_M_TO_CM))
 length_of_wire = 0.2
